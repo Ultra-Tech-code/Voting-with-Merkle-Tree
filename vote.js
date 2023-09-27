@@ -1,4 +1,4 @@
-const merkle = require('./merkle'); // Import the Merkle tree module
+const merkle = require('./merkle'); 
 const SHA256 = require('crypto-js/sha256');
 
 const voteCounts = {
@@ -7,7 +7,7 @@ const voteCounts = {
   C: 0,
 };
 
-// let votedEmails = {};
+ let votedEmails = {};
 
 function voteforCandidate(cand, email, number) {
 
@@ -16,7 +16,7 @@ function voteforCandidate(cand, email, number) {
     return;
   }
 
-// if (votedEmails[email] == undefined || votedEmails[email] == false){
+if (votedEmails[email] == undefined || votedEmails[email] == false){
 
     merkle.buildMerkleTree((tree, root) => { 
 
@@ -32,17 +32,17 @@ function voteforCandidate(cand, email, number) {
         }
         console.log("true boiii")
         voteCounts[cand]++;
-        // votedEmails[email] = true;
-        //emailInput.disabled = true;
+        votedEmails[email] = true;
+        emailInput.disabled = true;
         updateResults();
     
     
       })
 
-//   } else{
-//     alert("You have already voted.");
-//     return;
-//   }
+  } else{
+    alert("You have already voted.");
+    return;
+  }
 
 }
 
@@ -53,5 +53,5 @@ function updateResults() {
   }
 }
 
-// voteforCandidate("A", "isaac", 10)
+voteforCandidate("A", "isaac", 10)
 
