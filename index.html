@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="merkle.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Vote for Your Favorite Option</h1>
+    </header>
+
+    <main> 
+        <section class="options">
+            <div class="option">
+                <h2>Option A</h2>
+                <input type="email" id="emailA" placeholder="Enter your email">
+                <input type="number" id="numberA" placeholder="Enter your magic number">
+                <button onclick="voteforCandidate('A', emailA.value, numberA.value)">Vote</button>
+            </div>
+            <div class="option">
+                <h2>Option B</h2>
+                <input type="email" id="emailB" placeholder="Enter your email">
+                <input type="number" id="numberB" placeholder="Enter your magic number">
+                <button onclick="voteforCandidate('B', emailB.value, numberB.value)">Vote</button>
+            </div>
+            <div class="option">
+                <h2>Option C</h2>
+                <input type="email" id="emailC" placeholder="Enter your email">
+                <input type="number" id="numberC" placeholder="Enter your magic number">
+                <button onclick="voteforCandidate('C', emailC.value, numberC.value)">Vote</button>
+            </div>
+        </section>
+
+        <section class="results">
+            <h2>Results</h2>
+            <div class="result" id="resultA">
+                <h3>Option A</h3>
+                <span>0 votes</span>
+            </div>
+            <div class="result" id="resultB">
+                <h3>Option B</h3>
+                <span>0 votes</span>
+            </div>
+            <div class="result" id="resultC">
+                <h3>Option C</h3>
+                <span>0 votes</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Simple Voting Website</p>
+    </footer>
+
+    
+    <script src="vote.js"></script>
+</body>
+</html>  
+</body>
+</html>
